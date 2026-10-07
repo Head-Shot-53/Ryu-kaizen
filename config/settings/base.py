@@ -33,6 +33,7 @@ DJANGO_APPS = [
 
 LOCAL_APPS = [
     "apps.accounts.apps.AccountsConfig",
+    "apps.core.apps.CoreConfig",
 ]
 
 THIRD_PARTY_APPS = []
