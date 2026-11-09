@@ -15,6 +15,17 @@ ALLOWED_HOSTS = env.list(
     ],
 )
 
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": env("POSTGRES_DB"),
+        "USER": env("POSTGRES_USER"),
+        "PASSWORD": env("POSTGRES_PASSWORD"),
+        "HOST": "127.0.0.1",
+        "PORT": env("POSTGRES_PORT"),
+    }
+}
+
 
 # Emails are displayed in the terminal during development
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
